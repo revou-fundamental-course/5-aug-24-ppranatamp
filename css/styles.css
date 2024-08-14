@@ -1,1 +1,41 @@
 /* Ini adalah css  */
+
+body {
+    background-color: red;    
+}
+
+main {
+    display: flex;
+}
+
+header {
+    text-align: center;
+}
+
+.container {
+    border: 1px solid;
+    align-items: center;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    background-color: aqua;
+}
+
+aside {
+    padding: 10px;
+}
+
+.button-animated {
+    background-color: #ffc107;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .button-animated:hover {
+    transform: scale(1.05);
+  }
+  
