@@ -1,30 +1,70 @@
-/* Ini adalah css  */
-
 body {
-    background-color: red;    
-}
-
-main {
-    display: flex;
-}
-
-header {
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-    border: 1px solid;
-    align-items: center;
-    padding-left: 5px;
-    padding-bottom: 5px;
-    background-color: aqua;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Default layout */
+  gap: 20px; 
+  box-sizing: border-box;
+  margin: 20px 0;
 }
 
-aside {
-    padding: 10px;
+.calculator, .info {
+  flex: 1;
 }
 
-.button-animated {
+.calculator h1, .info h2, .c-penjelasan h1,.c-penjelasan h3 {
+  color: #0077cc;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio-group label {
+  margin-right: 20px;
+}
+
+button {
     background-color: #ffc107;
     color: white;
     padding: 10px 20px;
@@ -33,9 +73,81 @@ aside {
     font-size: 16px;
     cursor: pointer;
     transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.bg-hitung {
+  background-color: #0077cc;
+}
+
+.bg-reset {
+  background-color: red;
+}
+
+.hasil {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #e8f4ff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #b3d8ff;
+}
+
+.hasil h2 {
+  margin-bottom: 10px;
+}
+
+.hasil p {
+  margin: 5px 0;
+}
+
+.info h1, h2 {
+  margin-bottom: 10px;
+}
+
+.info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.info ul li {
+  margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Change to column on small screens */
+    padding: 1.5rem;
   }
-  
-  .button-animated:hover {
-    transform: scale(1.05);
+
+  h1 {
+    font-size: 1.5rem;
   }
-  
+
+  button {
+    font-size: 1rem;
+  }
+
+  .container {
+    gap: 10px; /* Reduce gap for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
