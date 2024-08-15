@@ -1,11 +1,12 @@
 /* Ini adalah Javascript */
 
+/* Function untuk menghitung menggunakan rumus BMI */
 function hitungBMI() {
     const genderMale = document.getElementById('gender-male').checked;
     const genderFemale = document.getElementById('gender-female').checked;
     const age = parseInt(document.getElementById('age').value);
     const bb = parseFloat(document.getElementById('bb').value);
-    const tb = parseFloat(document.getElementById('tb').value) / 100; // convert cm to m
+    const tb = parseFloat(document.getElementById('tb').value) / 100;
 
     if ((genderMale || genderFemale) && age > 0 && bb > 0 && tb > 0) {
         const bmi = bb / (tb * tb);
@@ -27,15 +28,17 @@ function hitungBMI() {
             saran = "BMI Anda di atas 30.0. Anda berada dalam kategori kegemukan. Disarankan untuk berkonsultasi dengan ahli gizi atau dokter.";
         }
 
+        /* Menampilkan Hasil BMI */
         document.getElementById('hasilBMI').textContent = hasilBMI;
         document.getElementById('kategoriBMI').textContent = kategoriBMI;
         document.getElementById('desc').textContent = saran;
         document.getElementById('hasil').style.display = 'block';
     } else {
-        alert("Mohon lengkapi semua data!");
+        alert("Mohon lengkapi semua data!"); /* Alert untuk melengkapi data form */
     }
 }
 
+/* function untuk mereset form BMI */
 function resetForm() {
     document.getElementById('bmi-form').reset();
     document.getElementById('hasil').style.display = 'none';
